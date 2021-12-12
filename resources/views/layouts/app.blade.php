@@ -11,6 +11,9 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
@@ -23,15 +26,8 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
+        <!-- Menu -->
         <x-nav.menu />
-        {{-- @include('layouts.navigation') --}}
-
-        <!-- Page Heading -->
-        {{-- <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
-            </div>
-        </header> --}}
 
         <!-- Page Content -->
         <main>
