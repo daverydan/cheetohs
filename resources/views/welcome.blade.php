@@ -21,8 +21,11 @@
                 </div>
             </div>
 
-            <img class="md:max-w-xl lg:max-w-3xl xl:max-w-4xl md:absolute md:bottom-0 md:right-0"
+            {{-- <img class="md:max-w-xl lg:max-w-3xl xl:max-w-4xl md:absolute md:bottom-0 md:right-0"
                 src="{{ Storage::disk('s3')->url('Past Customers/Windhaven’s Royalspotted Treasure ,born March 13,2017.jpg') }}"
+                style="width: 100%; z-index: 1" alt="Windhaven’s Royalspotted Treasure"> --}}
+            <img class="md:max-w-xl lg:max-w-3xl xl:max-w-4xl md:absolute md:bottom-0 md:right-0"
+                src="{{ asset('img/Windhavens_Royalspotted_Treasure_born_03_13_2017.jpeg') }}"
                 style="width: 100%; z-index: 1" alt="Windhaven’s Royalspotted Treasure">
         </div>
     </div>

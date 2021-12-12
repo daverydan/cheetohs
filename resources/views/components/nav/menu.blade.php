@@ -9,7 +9,9 @@
 
                 <a href="/"
                     class="block absolute top-0 left-0 bg-white border-b-4 border-gold shadow-md pt-1 pb-2 px-2 rounded-b-sm z-10 ml-4 lg:ml-8 w-52 lg:w-auto">
-                    <img src="{{ Storage::disk('s3')->url('wind-haven-cheetohs.png') }}" alt="Wind Haven Cheetohs"
+                    {{-- <img src="{{ Storage::disk('s3')->url('wind-haven-cheetohs.png') }}" alt="Wind Haven Cheetohs"
+                        style="margin-right: 10px;"> --}}
+                    <img src="{{ asset('img/wind-haven-cheetohs.png') }}" alt="Wind Haven Cheetohs"
                         style="margin-right: 10px;">
                 </a>
 
