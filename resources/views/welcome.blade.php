@@ -11,9 +11,11 @@
                 <div
                     class="text-white lg:w-auto mx-auto text-center z-50 px-10 pt-16 sm:h-full md:py-24 lg:py-44 xl:py-56">
                     <h3 class="text-4xl font-bold mb-5">Cheetoh Cat Founder</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus nostrum sed voluptatem, et
-                        esse, maxime ad magni nam fugiat numquam aliquam explicabo ducimus iste laborum eaque rem a
-                        commodi neque.</p>
+                    <p>
+                        The Cheetoh is the newest hybrid cross, utilizing the best of both the Bengal and the Ocicat
+                        breeds, eight generations or more removed from the wild, yet retaining the same beauty and
+                        exotic looks.
+                    </p>
                     <a href="#"
                         class="inline-block border border-white font-bold mt-6 px-4 py-2 hover:bg-gold hover:border-gold trasnsition duration-200 ease-in-out">
                         Available Kittens
