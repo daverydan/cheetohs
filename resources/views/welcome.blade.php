@@ -223,7 +223,7 @@
                 <div class="flex flex-col sm:justify-around sm:flex-row">
                     <div class="text-center text-white mb-16 sm:mb-0">
                         <span class="text-6xl font-bold inline-block mb-2">
-                            {{ \Carbon\Carbon::createFromDate(1985, 1, 1)->diff(\Carbon\Carbon::now())->format('%y') }}
+                            {{ \Carbon\Carbon::createFromDate(1985)->diff(\Carbon\Carbon::now())->format('%y') }}
                         </span>
                         <br>
                         <span class="uppercase font-bold">Years of Experience</span>
