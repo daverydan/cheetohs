@@ -44,52 +44,56 @@
                 <div class="w-full md:w-3/5 relative md:ml-16 z-10">
                     <div class="flex justify-start items-center mb-2">
                         <div class="w-8 bg-gold" style="height: 2px;"></div>
-                        <h4 class="text-gold uppercase ml-2">About Us</h4>
+                        <h4 class="text-gold uppercase ml-2">About</h4>
                     </div>
 
                     <h2 class="text-4xl font-bold mb-5">
-                        Breeding jungle lap cats since <span class="text-gold">1985</span>
+                        <span class="text-gold">Cheetoh Cats</span>
+                        <i class="fa fa-paw transform rotate-45 text-gold opacity-30"></i>
+                        <br>From the Jungle to Your Lap
                     </h2>
                     <p class="mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        The Cheetoh breed created by Windhaven Exotics combines the wild beauty of the Bengal with the
+                        sweet,
+                        dependable and loving nature of the Ocicat. The result is a large beautifully spotted cat that
+                        loves to be with its humans and is gentle enough for even your little ones!
                     </p>
                     <ul class="font-bold leading-9 pl-5">
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>Year round night staff</span>
+                            <span>Cheetoh breed founded in <span class="text-gold font-black">2006</span></span>
                         </li>
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>World-class farriery team</span>
+                            <span>Wonderful Family Companion Pets</span>
                         </li>
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>Complete fostering service</span>
+                            <span>Extremely Intelligent & Curious</span>
                         </li>
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>24hr resident veterinary care</span>
+                            <span>Unsurpassed Gentle Character</span>
                         </li>
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>Own fleet of equine transport</span>
+                            <span>Highly Sociable & Loving</span>
                         </li>
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>Quarantine and isolation facilities</span>
+                            <span>Great With All Children</span>
                         </li>
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>Full time and stud season boarders</span>
+                            <span>Larger Than Life Sized</span>
                         </li>
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>4 purpose-built foaling units encompassing 24hr supervision</span>
+                            <span>Doglike Temperment</span>
                         </li>
                         <li>
                             <i class="fa fa-paw text-gold mr-1"></i>
-                            <span>On-site veterinary hospital with neo-natal intensive care unit</span>
+                            <span>Playful & Energetic</span>
                         </li>
                     </ul>
 
@@ -114,20 +118,23 @@
                     <div class="w-8 bg-gold" style="height: 2px;"></div>
                 </div>
 
-                <h2 class="font-bold text-4xl mb-5">Creator of the <br>Cheetoh Breed</h2>
+                <h2 class="font-bold text-4xl mb-5">Founder of the <br>Cheetoh Breed</h2>
 
                 <p class="mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br> tempor incididunt ut
-                    labore et dolore magna aliqua.
+                    Carol has been breeding exotic cats since 1985. She created the Cheetoh breed <br>to improve upon
+                    the
+                    temperment of current hybrids.
                 </p>
             </div>
+        </x-site-width>
 
+        <div class="max-w-7xl mx-auto xl:px-8">
             <div class="flex lg:justify-between flex-col lg:flex-row">
                 {{-- Queens --}}
                 <div class="max-w-lg mx-auto lg:w-1/3 bg-white mb-12 lg:mb-0">
                     <a href="/queens" class="block group">
                         <div class="block overflow-hidden" style="max-height: 364px">
-                            <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat"
+                            <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat bg-center lg:bg-top"
                                 style="background-image: url({{ asset('img/queen-cheetoh.jpeg') }})">
                                 {{-- 'https://templates.envytheme.com/semental/default/assets/img/courses2.jpg' --}}
                                 <p
@@ -140,9 +147,12 @@
                                 <span class="text-5xl text-gold font-bold">Q</span>
                                 <span class="transition duration-200 ease-in-out group-hover:text-gold">ueens</span>
                             </h3>
-                            <p class="inline-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            <p class="inline-block">
+                                {{-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                                tempor incididunt ut labore et dolore magna aliqua. --}}
+                                Meet our Wind Haven Queens. Newest additions are Snow and Clouded Leopards.
+                            </p>
                             <button type="button" href="/queens"
                                 class="inline-block text-white bg-gold border border-gold font-bold mt-8 px-6 py-2 group-hover:bg-transparent group-hover:text-gold hover:border-gold hover:text-gold trasnsition duration-200 ease-in-out">
                                 View Now
@@ -154,7 +164,7 @@
                 <div class="max-w-lg mx-auto lg:w-1/3 bg-white mb-12 lg:mb-0 lg:mx-8">
                     <a href="/queens" class="block group">
                         <div class="block overflow-hidden" style="max-height: 364px">
-                            <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat"
+                            <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat bg-center lg:bg-top"
                                 style="background-image: url({{ asset('img/king-cheetoh.jpeg') }})">
                                 {{-- 'https://templates.envytheme.com/semental/default/assets/img/courses1.jpg' --}}
                                 <p
@@ -167,9 +177,9 @@
                                 <span class="text-5xl text-gold font-bold">K</span>
                                 <span class="transition duration-200 ease-in-out group-hover:text-gold">ings</span>
                             </h3>
-                            <p class="inline-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="inline-block">
+                                Our Wind Haven Kings now include Charcoal & Clouded Leopards.
+                            </p>
                             <button type="button" href="/queens"
                                 class="inline-block text-white bg-gold border border-gold font-bold mt-8 px-6 py-2 group-hover:bg-transparent group-hover:text-gold hover:border-gold hover:text-gold trasnsition duration-200 ease-in-out">
                                 View Now
@@ -181,7 +191,7 @@
                 <div class="max-w-lg mx-auto lg:w-1/3 bg-white mb-12 lg:mb-0">
                     <a href="/queens" class="block group">
                         <div class="block overflow-hidden" style="max-height: 364px">
-                            <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat"
+                            <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat bg-center lg:bg-top"
                                 style="background-image: url({{ asset('img/cheetoh-kittens.jpg') }})">
                                 {{-- 'https://templates.envytheme.com/semental/default/assets/img/courses3.jpg' --}}
                                 <p
@@ -194,9 +204,9 @@
                                 <span class="text-5xl text-gold font-bold">K</span>
                                 <span class="transition duration-200 ease-in-out group-hover:text-gold">ittens</span>
                             </h3>
-                            <p class="inline-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="inline-block">
+                                View upcoming litters, see past kittens and get on our waiting list!
+                            </p>
                             <button type="button" href="/queens"
                                 class="inline-block text-white bg-gold border border-gold font-bold mt-8 px-6 py-2 group-hover:bg-transparent group-hover:text-gold hover:border-gold hover:text-gold trasnsition duration-200 ease-in-out">
                                 View Now
@@ -205,31 +215,33 @@
                     </a>
                 </div>
             </div>
-        </x-site-width>
+        </div>
     </div>
     <div class="w-full bg-gold border-t-2 border-white pt-96">
         <x-site-width>
             <div class="pt-7 pb-28">
                 <div class="flex flex-col sm:justify-around sm:flex-row">
                     <div class="text-center text-white mb-16 sm:mb-0">
-                        <span class="text-6xl font-bold inline-block mb-2">35</span>
-                        <br>
-                        <span class="uppercase font-bold">Trainers</span>
-                    </div>
-                    <div class="text-center text-white mb-16 sm:mb-0">
-                        <span class="text-6xl font-bold inline-block mb-2">358</span>
-                        <br>
-                        <span class="uppercase font-bold">Students</span>
-                    </div>
-                    <div class="text-center text-white mb-16 sm:mb-0">
-                        <span class="text-6xl font-bold inline-block mb-2">47</span>
-                        <br>
-                        <span class="uppercase font-bold">Cheetohs</span>
-                    </div>
-                    <div class="text-center text-white mb-16 sm:mb-0">
-                        <span class="text-6xl font-bold inline-block mb-2">36</span>
+                        <span class="text-6xl font-bold inline-block mb-2">
+                            {{ \Carbon\Carbon::createFromDate(1985, 1, 1)->diff(\Carbon\Carbon::now())->format('%y') }}
+                        </span>
                         <br>
                         <span class="uppercase font-bold">Years of Experience</span>
+                    </div>
+                    <div class="text-center text-white mb-16 sm:mb-0">
+                        <span class="text-6xl font-bold inline-block mb-2">7</span>
+                        <br>
+                        <span class="uppercase font-bold">Countries</span>
+                    </div>
+                    <div class="text-center text-white mb-16 sm:mb-0">
+                        <span class="text-6xl font-bold inline-block mb-2">5</span>
+                        <br>
+                        <span class="uppercase font-bold">Colors / Patterns</span>
+                    </div>
+                    <div class="text-center text-white mb-16 sm:mb-0">
+                        <span class="text-6xl font-bold inline-block mb-2">3k+</span>
+                        <br>
+                        <span class="uppercase font-bold">Satisfied Owners</span>
                     </div>
                 </div>
             </div>
