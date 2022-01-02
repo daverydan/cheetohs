@@ -322,10 +322,10 @@
                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </p>
-                    <a type="button" href="/queens"
+                    <button type="button"
                         class="inline-block text-white bg-gold border border-gold font-bold mt-6 px-6 py-2 hover:bg-transparent hover:text-gold hover:border-gold trasnsition duration-200 ease-in-out">
                         View Available Kittens
-                    </a>
+                    </button>
                 </div>
             </div>
 
