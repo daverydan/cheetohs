@@ -20,11 +20,14 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    {{-- Alpine.js --}}
+    <script defer src="https://unpkg.com/alpinejs@3.7.1/dist/cdn.min.js"></script>
+
     <!-- Custom Page Styles -->
     @yield('styles')
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased" x-cloak>
     <div class="min-h-screen bg-gray-100">
         <!-- Menu -->
         <x-nav.menu />
