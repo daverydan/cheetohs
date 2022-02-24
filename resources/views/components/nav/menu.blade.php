@@ -3,18 +3,19 @@
         <div class="flex flex-col lg:flex-row lg:justify-between">
             <div class="flex justify-end lg:justify-between lg:block">
 
-                {{-- <a class="block h-12 w-40 mt-3 mb-5"
-                    style="background-image: url(http://msjobs.test/img/medical-sales-jobs-logo.png); background-repeat: no-repeat; background-size: contain;"
-                    href="/"></a> --}}
+                {{-- 257 x 117 --}}
+                {{-- <a href="/" class="bg-white" style="width: 257px; display: block; text-align: center">
+                    <h1 class="title text-6xl" style="line-height: 40px; padding-top: 30px">
+                        Wind Haven
+                    </h1>
+                    <p class="uppercase font-bold" style="letter-spacing: 1.5rem">Cheetohs</p>
+                </a> --}}
 
                 <a href="/"
                     class="block absolute top-0 left-0 bg-white border-b-4 border-gold shadow-md pt-1 pb-2 px-2 rounded-b-sm z-10 ml-4 lg:ml-8 w-52 lg:w-auto">
-                    {{-- <img src="{{ Storage::disk('s3')->url('wind-haven-cheetohs.png') }}" alt="Wind Haven Cheetohs"
-                        style="margin-right: 10px;"> --}}
                     <img src="{{ asset('img/wind-haven-cheetohs.png') }}" alt="Wind Haven Cheetohs"
                         style="margin-right: 10px;">
                 </a>
-
 
                 <button @click="show = !show"
                     class="block h-8 text-black items-center hover:text-opacity-50 focus:outline-none lg:hidden mt-5 mb-5">
@@ -28,49 +29,43 @@
                     </svg>
                 </button>
             </div>
-            <ul x-show="show" @click.away="show = false" id="x-guest-menu-mobile" class="flex flex-col lg:hidden"
+
+            {{-- Mobile --}}
+            <ul x-show="show" @click.away="show = false" id="x-guest-menu-mobile" class="flex flex-col lg:hidden mt-8"
                 style="display: none;">
                 <li>
-                    <a href="/jobs"
+                    <a href="/about"
                         class="block text-sm py-3 hover:text-green hover:bg-green hover:bg-opacity-20 hover:pl-3 transition-all duration-200 ease-in-out ">
-                        Search Jobs
+                        About
                     </a>
                 </li>
                 <li>
-                    <a href="/my-jobs"
+                    <a href="/cats"
                         class="block text-sm py-3 hover:text-green hover:bg-green hover:bg-opacity-20 hover:pl-3 transition-all duration-200 ease-in-out ">
-                        My Jobs
+                        Cats
                     </a>
                 </li>
                 <li>
-                    <a href="/messages"
+                    <a href="/kittens"
                         class="block text-sm py-3 hover:text-green hover:bg-green hover:bg-opacity-20 hover:pl-3 transition-all duration-200 ease-in-out ">
-                        Messages
+                        Available
                     </a>
                 </li>
                 <li>
-                    <a href="/company-candidates"
+                    <a href="/resources"
                         class="block text-sm py-3 hover:text-green hover:bg-green hover:bg-opacity-20 hover:pl-3 transition-all duration-200 ease-in-out ">
-                        My Candidates
+                        Resources
                     </a>
                 </li>
                 <li>
-                    <a href="/candidates"
+                    <a href="/#contact"
                         class="block text-sm py-3 hover:text-green hover:bg-green hover:bg-opacity-20 hover:pl-3 transition-all duration-200 ease-in-out ">
-                        Find Candidates
+                        Contact
                     </a>
                 </li>
-                <li>
-                    <a href="/services"
-                        class="block text-sm py-3 hover:text-green hover:bg-green hover:bg-opacity-20 hover:pl-3 transition-all duration-200 ease-in-out ">
-                        Services
-                    </a>
-                </li>
-
-
             </ul>
 
-
+            {{-- Desktop --}}
             <ul id="x-nav-desktop-menu" class="hidden items-center lg:flex flex-col lg:flex-row">
                 <li>
                     <a href="/" class="block mx-5 group hover:text-gold transition duration-200 ease-in-out relative">
@@ -89,18 +84,24 @@
                 </li>
                 <li>
                     <a href="/cats"
-                        class="block px-5 py-6 font-bold hover:text-gold transition duration-200 ease-in-out uppercase">Cats</a>
+                        class="block px-5 py-6 font-bold hover:text-gold transition duration-200 ease-in-out uppercase">
+                        Cats
+                    </a>
                 </li>
                 <li>
-                    <a href="/available"
-                        class="block px-5 py-6 font-bold hover:text-gold transition duration-200 ease-in-out uppercase">Available</a>
+                    <a href="/kittens"
+                        class="block px-5 py-6 font-bold hover:text-gold transition duration-200 ease-in-out uppercase">
+                        Available
+                    </a>
                 </li>
                 <li>
                     <a href="/resources"
-                        class="block px-5 py-6 font-bold hover:text-gold transition duration-200 ease-in-out uppercase">Resources</a>
+                        class="block px-5 py-6 font-bold hover:text-gold transition duration-200 ease-in-out uppercase">
+                        Resources
+                    </a>
                 </li>
                 <li>
-                    <a href="/contact"
+                    <a href="/#contact"
                         class="block px-5 py-6 font-bold hover:text-gold transition duration-200 ease-in-out uppercase">
                         Contact
                     </a>

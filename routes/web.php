@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/kittens', function () {
+    return view('page-kittens');
+});
+
 Route::post('contact', function () {
     dd(request()->all());
     // return view('welcome');

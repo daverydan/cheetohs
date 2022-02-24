@@ -23,11 +23,25 @@
     {{-- Alpine.js --}}
     <script defer src="https://unpkg.com/alpinejs@3.7.1/dist/cdn.min.js"></script>
 
+    <style>
+        @font-face {
+            font-family: "Cheetohs";
+            src: url({{ asset('./fonts/Monthoers.ttf') }}) format("truetype");
+        }
+
+        .title {
+            font-family: 'Cheetohs', Arial, sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+
     <!-- Custom Page Styles -->
     @yield('styles')
 </head>
 
-<body class="font-sans antialiased" x-cloak>
+<body class="font-sans antialiased selection:bg-gold selection:text-white" x-cloak>
     <div class="min-h-screen bg-gray-100">
         <!-- Menu -->
         <x-nav.menu />
