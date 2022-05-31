@@ -19,7 +19,7 @@
                         breeds, eight generations or more removed from the wild, yet retaining the same beauty and
                         exotic looks.
                     </p>
-                    <a href="#"
+                    <a href="/kittens"
                         class="inline-block border border-white font-bold mt-6 px-4 py-2 hover:bg-gold hover:border-gold trasnsition duration-200 ease-in-out">
                         Available Kittens
                     </a>
@@ -193,7 +193,7 @@
                 </div>
                 {{-- Kittens --}}
                 <div class="max-w-lg mx-auto lg:w-1/3 bg-white mb-12 lg:mb-0">
-                    <a href="/queens" class="block group">
+                    <a href="/kittens" class="block group">
                         <div class="block overflow-hidden" style="max-height: 364px">
                             <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat bg-center lg:bg-top"
                                 style="background-image: url({{ asset('img/cheetoh-kittens.jpg') }})">
@@ -322,10 +322,10 @@
                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </p>
-                    <button type="button"
+                    <a href="/kittens"
                         class="inline-block text-white bg-gold border border-gold font-bold mt-6 px-6 py-2 hover:bg-transparent hover:text-gold hover:border-gold trasnsition duration-200 ease-in-out">
                         View Available Kittens
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -336,7 +336,7 @@
                     <p class="mb-4 text-red-600">
                         Form functionality coming soon.
                     </p>
-                    <form x-data="{show: false}" action="/contact" method="POST">
+                    <form x-data="{ show: false }" action="/contact" method="POST">
 
                         <div class="flex items-center mb-4">
                             <label for="check"
