@@ -1,4 +1,7 @@
-<x-app-layout>
+{{-- <x-app-layout> --}}
+@extends('layouts.app', ['title' => 'Home'])
+
+@section('content')
     {{-- <p class="hidden xl:block text-center font-bold mb-6">XL</p>
     <p class="hidden lg:block xl:hidden text-center font-bold mb-6">LG</p>
     <p class="hidden md:block lg:hidden text-center font-bold mb-6">MD</p>
@@ -8,8 +11,7 @@
     <div class="bg-black">
         <div class="relative" style="max-width: 1440px; margin: auto">
             <div class="flex sm:h-full z-50 md:w-1/2 lg:w-1/2">
-                <div
-                    class="text-white lg:w-auto mx-auto text-center z-50 px-10 pt-16 sm:h-full md:py-24 lg:py-44 xl:py-56">
+                <div class="text-white lg:w-auto mx-auto text-center z-50 px-10 pt-16 sm:h-full md:py-24 lg:py-44 xl:py-56">
                     <h3 class="text-4xl font-bold mb-5 leading-snug">
                         Cheetoh Cat Founder
                         <span class="block text-sm">Carol Drymon</span>
@@ -30,7 +32,7 @@
                 src="{{ Storage::disk('s3')->url('Past Customers/Windhaven’s Royalspotted Treasure ,born March 13,2017.jpg') }}"
                 style="width: 100%; z-index: 1" alt="Windhaven’s Royalspotted Treasure"> --}}
             <img class="md:max-w-xl lg:max-w-3xl xl:max-w-4xl md:absolute md:bottom-0 md:right-0"
-                src="{{ asset('img/Windhavens_Royalspotted_Treasure_born_03_13_2017.jpeg') }}"
+                src="{{ asset('img/page-home/Windhavens_Royalspotted_Treasure_born_03_13_2017.jpeg') }}"
                 style="width: 100%; z-index: 1" alt="Windhaven’s Royalspotted Treasure">
         </div>
     </div>
@@ -41,8 +43,8 @@
             <div class="md:flex relative">
                 {{-- sm:overflow-hidden --}}
                 <div class="w-full mb-10 md:mb-0 md:w-2/5 z-10">
-                    <img class="border-8 border-white shadow-gold" src="{{ asset('img/cheetoh-companion.jpeg') }}"
-                        alt="" style="max-width: 100%">
+                    <img class="border-8 border-white shadow-gold"
+                        src="{{ asset('img/page-home/cheetoh-companion.jpeg') }}" alt="" style="max-width: 100%">
                 </div>
                 <div class="w-full md:w-3/5 relative md:ml-16 z-10">
                     <div class="flex justify-start items-center mb-2">
@@ -108,13 +110,12 @@
                     </a>
                 </div>
                 <img class="absolute -bottom-16 right-0 max-w-3xl opacity-20 z-0"
-                    src="{{ asset('img/jumping-cheetoh-vector.jpeg') }}" alt="Jumping Cheetoh">
+                    src="{{ asset('img/page-home/jumping-cheetoh-vector.jpeg') }}" alt="Jumping Cheetoh">
             </div>
         </x-site-width>
     </div>
 
-    {{-- border-t-2 border-gold --}}
-    <div class="w-full px-4 pt-28 relative -mb-80">
+    <div class="w-full px-4 pt-28 relative -mb-80 ansolute" id="cats">
         <x-site-width>
             <div class="text-center mb-16">
                 <div class="flex justify-center items-center mb-5">
@@ -140,7 +141,7 @@
                     <a href="/queens" class="block group">
                         <div class="block overflow-hidden" style="max-height: 364px">
                             <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat bg-center lg:bg-top"
-                                style="background-image: url({{ asset('img/queen-cheetoh.jpeg') }})">
+                                style="background-image: url({{ asset('img/page-home/queen-cheetoh.jpeg') }})">
                                 {{-- 'https://templates.envytheme.com/semental/default/assets/img/courses2.jpg' --}}
                                 <p
                                     class="flex justify-center items-center h-full text-white text-6xl font-bold transition duration-200 opacity-0 group-hover:opacity-70">
@@ -167,10 +168,10 @@
                 </div>
                 {{-- Kings --}}
                 <div class="max-w-lg mx-auto lg:w-1/3 bg-white mb-12 lg:mb-0 lg:mx-8">
-                    <a href="/queens" class="block group">
+                    <a href="/kings" class="block group">
                         <div class="block overflow-hidden" style="max-height: 364px">
                             <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat bg-center lg:bg-top"
-                                style="background-image: url({{ asset('img/king-cheetoh.jpeg') }})">
+                                style="background-image: url({{ asset('img/page-home/king-cheetoh.jpeg') }})">
                                 <p
                                     class="flex justify-center items-center h-full text-white text-6xl font-bold transition duration-200 opacity-0 group-hover:opacity-70">
                                     Kings</p>
@@ -196,7 +197,7 @@
                     <a href="/kittens" class="block group">
                         <div class="block overflow-hidden" style="max-height: 364px">
                             <div class="h-96 w-full scale-100 transform hover:scale-125 transition duration-1000 ease-in-out bg-cover bg-no-repeat bg-center lg:bg-top"
-                                style="background-image: url({{ asset('img/cheetoh-kittens.jpg') }})">
+                                style="background-image: url({{ asset('img/page-home/cheetoh-kittens.jpg') }})">
                                 {{-- 'https://templates.envytheme.com/semental/default/assets/img/courses3.jpg' --}}
                                 <p
                                     class="flex justify-center items-center h-full text-white text-6xl font-bold transition duration-200 opacity-0 group-hover:opacity-70">
@@ -483,4 +484,5 @@
     <div x-data>
         <button @click="alert('Alpine Js is working !')">Click</button>
     </div> --}}
-</x-app-layout>
+    {{-- </x-app-layout> --}}
+@endsection

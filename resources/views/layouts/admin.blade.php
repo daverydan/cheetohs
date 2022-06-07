@@ -43,45 +43,66 @@
     @yield('styles')
 </head>
 
-<body class="font-sans antialiased selection:bg-gold selection:text-white" x-cloak>
-    <div class="bg-gray-100">
+<body class="font-sans antialiased selection:bg-gold selection:text-white h-screen" x-cloak>
+    <div class="bg-gray-100 h-full">
         <!-- Menu -->
         <x-nav.menu />
 
         <!-- Page Content -->
-        <main x-data="{ addCat: true }" class="main flex flex-col md:flex-row bg-black" style="height: 100vh">
-            {{-- {{ $slot }} --}}
+        {{-- @if (strpos(url()->current(), 'dashboard') == true)
+            <main x-data="{ addCat: false }" class="main bg-black h-full pt-20">
+                <x-site-width>
+                    @yield('content')
+                </x-site-width>
+            </main>
+        @else --}}
+        <main class="main flex flex-col md:flex-row bg-black h-full">
             <div class="mt-20 mb-5 px-8 w-full md:w-72 border-0 md:border-r">
                 <p class="text-white m-0">Admin Menu</p>
-                <a href="/admin/queens"
-                    class="text-white px-3 py-2 border rounded block my-2 hover:text-black hover:bg-white transition duration-200 ease-in-out {{ request()->routeIs('/admin/queens') ? 'text' : '' }}">
+                <a href="/queens"
+                    class="text-white px-3 py-2 border rounded block my-2 hover:text-black hover:bg-white transition duration-200 ease-in-out {{ request()->routeIs('/queens') ? 'text' : '' }}">
                     Queens
                 </a>
-                <a href="/admin/kings"
+                <a href="/kings"
                     class="text-white px-3 py-2 border rounded block my-3 hover:text-black hover:bg-white transition duration-200 ease-in-out">
                     Kings
                 </a>
-                <a href="/admin/litters"
+                <a href="/litters"
                     class="text-white px-3 py-2 border rounded block my-2 hover:text-black hover:bg-white transition duration-200 ease-in-out">
                     Litters
                 </a>
 
                 <p class="text-white mt-5 mb-2">Actions</p>
-                <button type="button" @click="addCat = !addCat"
-                    class="w-full text-white bg-gold border border-gold font-bold px-6 py-2 hover:bg-transparent hover:text-gold hover:border-gold trasnsition duration-200 ease-in-out mb-3">
+                <a href="/cat/create"
+                    class="block w-full text-white bg-gold border border-gold font-bold px-6 py-2 hover:bg-transparent hover:text-gold hover:border-gold trasnsition duration-200 ease-in-out mb-3">
                     <i class="fa fa-plus"></i>
                     Add a Cat
-                </button>
-                <button type="button" @click="addCat = !addCat"
-                    class="w-full text-white bg-gold border border-gold font-bold px-6 py-2 hover:bg-transparent hover:text-gold hover:border-gold trasnsition duration-200 ease-in-out mb-8">
+                </a>
+                <a href="/litter/create"
+                    class="block w-full text-white bg-gold border border-gold font-bold px-6 py-2 hover:bg-transparent hover:text-gold hover:border-gold trasnsition duration-200 ease-in-out mb-8">
                     <i class="fa fa-plus"></i>
                     Add a Litter
-                </button>
+                </a>
             </div>
             <div class="flex-1 md:py-20 px-8">
+                <h1 class="text-white text-3xl font-bold">Admin Dashboard</h1>
+                <hr class="my-2">
+
+                <div class="flex mb-8">
+                    <h2 class="text-white text-xl font-bold">Welcome, {{ auth()->user()->name }}</h2>
+                    <form action="/logout" method="POST" class="mr-2">
+                        @csrf
+                        <button type="submit"
+                            class="border border-red-600 text-red-600 hover:text-white px-2 py-1 hover:bg-red-600 flex justify-center items-center rounded transition duration-200 ease-in-out ml-2">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+
                 @yield('content')
             </div>
         </main>
+        {{-- @endif --}}
     </div>
 
     <!-- Custom Page Scripts -->

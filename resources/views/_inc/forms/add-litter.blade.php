@@ -1,4 +1,5 @@
-<div class="">
+<div class="pt-8">
+    <h2 class="text-white text-xl font-bold">Add Litter</h2>
     <form action="/cat" method="POST" class="py-8" enctype="multipart/form-data">
         @csrf
         <div class="mb-8">
@@ -11,6 +12,8 @@
                 <p class="text-white md:ml-[8rem] mt-1 bg-red-600 max-w-lg px-1">{{ $message }}</p>
             @enderror
         </div>
+
+        
 
         <div class="mb-8">
             <div class="md:flex">
@@ -46,12 +49,6 @@
                             type="file" id="pic" name="pic" multiple>
                     </div>
                 </div>
-
-                <!-- Custom scripts -->
-                <script type="text/javascript">
-                    const checkbox = document.getElementById("flexCheckIndeterminate");
-                    checkbox.indeterminate = true;
-                </script>
             </div>
             @error('pic')
                 <p class="text-white md:ml-[8rem] mt-1 bg-red-600 max-w-lg px-1">{{ $message }}</p>
@@ -127,6 +124,10 @@
         <div class="md:flex">
             <label for="submit-button" class="w-32 opacity-0 hidden md:block">Description</label>
             <div class="flex max-w-lg w-full">
+                <button type="button" @click="addCat = false"
+                    class="max-w-lg inline-block text-red-600 bg-transparent border border-red-600 font-bold mt-6 px-6 py-2 hover:bg-red-600 hover:text-white trasnsition duration-200 ease-in-out w-full mr-5">
+                    Cancel
+                </button>
                 <button type="submit"
                     class="max-w-lg inline-block text-white bg-gold border border-gold font-bold mt-6 px-6 py-2 hover:bg-opacity-80 hover:border-gold trasnsition duration-200 ease-in-out w-full">
                     Add Cat

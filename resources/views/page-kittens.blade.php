@@ -1,4 +1,6 @@
-<x-app-layout>
+@extends('layouts.app', ['title' => 'kittens'])
+
+@section('content')
     <img class="w-full" src="{{ asset('./img/page-kittens/2kittenscuddle-Terry-Tilford-edited.jpg') }}" alt="">
 
     <div class="py-12">
@@ -11,37 +13,42 @@
 
                 <div class="flex flex-col sm:flex-row justify-between space-y-8 sm:space-y-0 sm:space-x-8 mb-8">
                     <div>
-                        <img src="./img/kittens/melody-n-warrior/01-dark-girl.jpeg" alt="dark-girl">
+                        <img src="{{ asset('/img/kittens/melody-n-warrior/01-dark-girl.jpeg') }}" alt="dark-girl">
                     </div>
                     <div>
-                        <img src="./img/kittens/melody-n-warrior/02-light-girl.jpg" alt="dark-girl">
+                        <img src="{{ asset('/img/kittens/melody-n-warrior/02-light-girl.jpg') }}" alt="dark-girl">
                     </div>
                     <div>
-                        <img src="./img/kittens/melody-n-warrior/03-boy1.jpeg" alt="dark-girl">
+                        <img src="{{ asset('/img/kittens/melody-n-warrior/03-boy1.jpeg') }}" alt="dark-girl">
                     </div>
                     <div>
-                        <img src="./img/kittens/melody-n-warrior/04-boy2.jpeg" alt="dark-girl">
+                        <img src="{{ asset('/img/kittens/melody-n-warrior/04-boy2.jpeg') }}" alt="dark-girl">
                     </div>
                 </div>
                 <div class="flex flex-col sm:flex-row justify-between space-y-8 sm:space-y-0 sm:space-x-8 mb-8">
                     <div>
-                        <img src="./img/kittens/melody-n-warrior/05-boy3.jpeg" alt="dark-girl">
+                        <img src="{{ asset('/img/kittens/melody-n-warrior/05-boy3.jpeg') }}" alt="dark-girl">
+                    </div>
+                    {{-- hidden images for spacing --}}
+                    <div>
+                        <img class="hidden sm:block opacity-0"
+                            src="{{ asset('/img/kittens/melody-n-warrior/05-boy3.jpeg') }}" alt="dark-girl">
                     </div>
                     <div>
-                        <img class="hidden sm:block opacity-0" src="./img/kittens/melody-n-warrior/05-boy3.jpeg"
-                            alt="dark-girl">
+                        <img class="hidden sm:block opacity-0"
+                            src="{{ asset('/img/kittens/melody-n-warrior/05-boy3.jpeg') }}" alt="dark-girl">
                     </div>
                     <div>
-                        <img class="hidden sm:block opacity-0" src="./img/kittens/melody-n-warrior/05-boy3.jpeg"
-                            alt="dark-girl">
-                    </div>
-                    <div>
-                        <img class="hidden sm:block opacity-0" src="./img/kittens/melody-n-warrior/05-boy3.jpeg"
-                            alt="dark-girl">
+                        <img class="hidden sm:block opacity-0"
+                            src="{{ asset('/img/kittens/melody-n-warrior/05-boy3.jpeg') }}" alt="dark-girl">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</x-app-layout>
+        @foreach ($litters as $litter)
+            {{ $litter->mom[0]->name }}
+            {{ $litter->dad[0]->name }}
+        @endforeach
+    </div>
+@endsection

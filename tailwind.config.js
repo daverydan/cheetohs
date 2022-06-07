@@ -27,6 +27,8 @@ module.exports = {
                 // gray: "-30px -30px 0px 0px #daddd3",
                 // gold: "-30px -30px 0px 0px #D4AF37",
                 gold: "-20px -20px 0px 0px #956C34",
+                bottomRight: "20px 20px 0px 0px #956C34",
+                bottomRightLight: "20px 20px 0px 0px rgba(149, 108, 52, .3)",
             },
         },
     },
