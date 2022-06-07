@@ -1,6 +1,6 @@
 <div class="pt-8">
     <h2 class="text-white text-xl font-bold">Add Litter</h2>
-    <form action="/cat" method="POST" class="py-8" enctype="multipart/form-data">
+    <form action="/litter" method="POST" class="py-8" enctype="multipart/form-data">
         @csrf
         <div class="mb-8">
             <div class="md:flex">
@@ -13,7 +13,7 @@
             @enderror
         </div>
 
-        
+
 
         <div class="mb-8">
             <div class="md:flex">
