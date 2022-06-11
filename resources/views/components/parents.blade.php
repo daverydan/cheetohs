@@ -73,7 +73,7 @@
             </h3>
         </a>
     </div> --}}
-    <p class="text-center text-2xl my-2">
+    <p class="text-center text-2xl mt-3 mb-2">
         {{ \Carbon\Carbon::parse($litter->birthday)->format('n / j / y') }}
     </p>
     <div class="text-center mt-3">
