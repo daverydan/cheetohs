@@ -41,29 +41,6 @@
 
         <div class="mb-8">
             <div class="md:flex">
-                <label for="pic" class="w-32 text-white block mb-2">Avatar</label>
-                <div class="">
-                    <div class="max-w-xl w-full">
-                        <input
-                            class="max-w-xl block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out m-0
-                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            type="file" id="pic" name="pic" multiple>
-                    </div>
-                </div>
-
-                <!-- Custom scripts -->
-                <script type="text/javascript">
-                    const checkbox = document.getElementById("flexCheckIndeterminate");
-                    checkbox.indeterminate = true;
-                </script>
-            </div>
-            @error('pic')
-                <p class="text-white md:ml-[8rem] mt-1 bg-red-600 max-w-lg px-1">{{ $message }}</p>
-            @enderror
-        </div>
-
-        <div class="mb-8">
-            <div class="md:flex">
                 <label for="color" class="w-32 text-white block mb-2">Color</label>
                 <input type="text" name="color" value="{{ old('name', $cat->color) }}"
                     class="font-lg max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md">
@@ -114,6 +91,32 @@
                 </select>
             </div>
             @error('generation')
+                <p class="text-white md:ml-[8rem] mt-1 bg-red-600 max-w-lg px-1">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div class="mb-8">
+            <div class="md:flex">
+                <label for="avatar" class="w-32 text-white block mb-2">Avatar</label>
+                <input
+                    class="max-w-lg block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out m-0
+                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    type="file" id="avatar" name="avatar" multiple>
+            </div>
+            @error('avatar')
+                <p class="text-white md:ml-[8rem] mt-1 bg-red-600 max-w-lg px-1">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div class="mb-8">
+            <div class="md:flex">
+                <label for="pic" class="w-32 text-white block mb-2">Main Pic</label>
+                <input
+                    class="max-w-lg block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    type="file" id="pic" name="pic" multiple>
+            </div>
+            @error('pic')
                 <p class="text-white md:ml-[8rem] mt-1 bg-red-600 max-w-lg px-1">{{ $message }}</p>
             @enderror
         </div>

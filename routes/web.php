@@ -17,9 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/kittens', function () {
-    return view('page-kittens');
-});
+// Route::get('/kittens', function () {
+//     return view('page-kittens');
+// });
+Route::get('kittens', [\App\Http\Controllers\LitterController::class, 'index']);
 
 Route::get('/queens ', [\App\Http\Controllers\CatController::class, 'index']);
 Route::get('/kings ', [\App\Http\Controllers\CatController::class, 'index']);

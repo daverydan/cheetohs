@@ -21,6 +21,7 @@
         @endauth
         <div class="overflow-auto">
             @foreach ($cats as $cat)
+                <div id="{{ $cat->name }}"></div>
                 @if ($loop->odd)
                     <div class="flex flex-col md:flex-row my-16">
                         <div class="w-full md:w-1/2 z-10" style="padding-left: 20px">
@@ -129,4 +130,5 @@
             @endforeach
         </div>
     </div>
+    <div class="h-[1000px]"></div>
 @endsection

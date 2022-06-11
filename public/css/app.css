@@ -828,14 +828,17 @@ select {
 .left-11 {
 	left: 2.75rem;
 }
+.left-1\/2 {
+	left: 50%;
+}
+.top-14 {
+	top: 3.5rem;
+}
 .top-0 {
 	top: 0px;
 }
 .top-1\/2 {
 	top: 50%;
-}
-.left-1\/2 {
-	left: 50%;
 }
 .bottom-0 {
 	bottom: 0px;
@@ -897,13 +900,13 @@ select {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 }
-.mx-4 {
-	margin-left: 1rem;
-	margin-right: 1rem;
-}
 .mx-5 {
 	margin-left: 1.25rem;
 	margin-right: 1.25rem;
+}
+.mx-4 {
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 .ml-3 {
 	margin-left: 0.75rem;
@@ -1064,6 +1067,9 @@ select {
 .h-\[390px\] {
 	height: 390px;
 }
+.h-\[1000px\] {
+	height: 1000px;
+}
 .min-h-screen {
 	min-height: 100vh;
 }
@@ -1148,6 +1154,10 @@ select {
 .origin-top-right {
 	transform-origin: top right;
 }
+.-translate-x-1\/2 {
+	--tw-translate-x: -50%;
+	transform: var(--tw-transform);
+}
 .rotate-45 {
 	--tw-rotate: 45deg;
 	transform: var(--tw-transform);
@@ -1231,6 +1241,9 @@ select {
 .rounded {
 	border-radius: 0.25rem;
 }
+.rounded-lg {
+	border-radius: 0.5rem;
+}
 .rounded-sm {
 	border-radius: 0.125rem;
 }
@@ -1264,14 +1277,14 @@ select {
 .border-r {
 	border-right-width: 1px;
 }
-.border-b-2 {
-	border-bottom-width: 2px;
-}
 .border-b-4 {
 	border-bottom-width: 4px;
 }
 .border-b {
 	border-bottom-width: 1px;
+}
+.border-b-2 {
+	border-bottom-width: 2px;
 }
 .border-l-4 {
 	border-left-width: 4px;
@@ -1463,13 +1476,13 @@ select {
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
 }
-.py-12 {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-}
 .px-5 {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
+}
+.py-12 {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 .py-6 {
 	padding-top: 1.5rem;
@@ -1582,6 +1595,10 @@ select {
 	font-size: 0.75rem;
 	line-height: 1rem;
 }
+.text-9xl {
+	font-size: 8rem;
+	line-height: 1;
+}
 .font-medium {
 	font-weight: 500;
 }
@@ -1690,6 +1707,9 @@ select {
 .text-gray-800 {
 	--tw-text-opacity: 1;
 	color: rgba(31, 41, 55, var(--tw-text-opacity));
+}
+.text-opacity-40 {
+	--tw-text-opacity: 0.4;
 }
 .underline {
 	text-decoration: underline;
@@ -1921,6 +1941,10 @@ select {
 .hover\:text-opacity-50:hover {
 	--tw-text-opacity: 0.5;
 }
+.hover\:shadow-lg:hover {
+	--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .focus\:z-10:focus {
 	z-index: 10;
 }
@@ -2039,6 +2063,11 @@ select {
 .group:hover .group-hover\:left-0 {
 	left: 0px;
 }
+.group:hover .group-hover\:scale-110 {
+	--tw-scale-x: 1.1;
+	--tw-scale-y: 1.1;
+	transform: var(--tw-transform);
+}
 .group:hover .group-hover\:bg-transparent {
 	background-color: transparent;
 }
@@ -2097,6 +2126,10 @@ select {
 
 	.sm\:h-full {
 		height: 100%;
+	}
+
+	.sm\:w-1\/2 {
+		width: 50%;
 	}
 
 	.sm\:max-w-md {

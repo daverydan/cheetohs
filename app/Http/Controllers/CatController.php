@@ -39,11 +39,18 @@ class CatController extends Controller
      */
     public function store(CatRequest $request)
     {
-        $path = null;
+        $pic_path = null;
         if ($request->hasFile('pic')) {
-            $path = $request->file('pic')->storeAs(
+            $pic_path = $request->file('pic')->storeAs(
                 'pics/' . $request->type . 's',
                 $request->file('pic')->getClientOriginalName(),
+            );
+        }
+        $avatar_path = null;
+        if ($request->hasFile('avatar')) {
+            $avatar_path = $request->file('avatar')->storeAs(
+                'avatars/' . $request->type . 's',
+                $request->file('avatar')->getClientOriginalName(),
             );
         }
         Cat::create([
@@ -53,7 +60,8 @@ class CatController extends Controller
             'color' => $request->color,
             'generation' => $request->generation,
             'description' => $request->description,
-            'pic' => $path,
+            'avatar' => $avatar_path,
+            'pic' => $pic_path,
         ]);
         return redirect()->back()->with('success', 'Cat created successfully!');
     }
@@ -89,10 +97,21 @@ class CatController extends Controller
      */
     public function update(Request $request, Cat $cat)
     {
+        if ($request->hasFile('avatar')) {
+            Storage::delete($cat->avatar); // delete old
+        }
         if ($request->hasFile('pic')) {
             Storage::delete($cat->pic); // delete old
         }
         $cat->update($request->all());
+        if ($request->hasFile('avatar')) {
+            $path = $request->file('avatar')->storeAs(
+                'avatars/' . $request->type . 's',
+                $request->file('avatar')->getClientOriginalName(),
+            );
+            $cat->avatar = $path;
+            $cat->save();
+        }
         if ($request->hasFile('pic')) {
             $path = $request->file('pic')->storeAs(
                 'pics/' . $request->type . 's',

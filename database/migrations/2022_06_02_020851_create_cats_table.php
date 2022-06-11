@@ -19,9 +19,9 @@ class CreateCatsTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->string('color');
-            // $table->string('pattern');
             $table->string('generation');
             $table->longText('description');
+            $table->string('avatar')->nullable();
             $table->string('pic')->nullable();
             $table->timestamps();
         });
