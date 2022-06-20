@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LitterRequest;
+use App\Models\Cat;
 use App\Models\Litter;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class LitterController extends Controller
@@ -26,7 +29,9 @@ class LitterController extends Controller
      */
     public function create()
     {
-        return view('litters.create');
+        $moms = Cat::where('type', 'queen')->get();
+        $dads = Cat::where('type', 'king')->get();
+        return view('litters.create', compact('moms', 'dads'));
     }
 
     /**
@@ -35,9 +40,26 @@ class LitterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LitterRequest $request)
     {
-        dd($request->all());
+        $mom = Cat::where('id', $request->mom_id)->first()->name;
+        $dad = Cat::where('id', $request->dad_id)->first()->name;
+        $birthday = Carbon::create($request->birthday);
+
+        Litter::create([
+            'user_id' => auth()->id(),
+            'mom_id' => $request->mom_id,
+            'dad_id' => $request->dad_id,
+            'name' => $mom . ' + ' . $dad,
+            'birthday' => $birthday,
+        ]);
+
+        return redirect()->back();
+        // dd($request->pics);
+
+        foreach ($request->file('pics') as $pic) {
+            dd($pic);
+        }
     }
 
     /**
@@ -84,4 +106,4 @@ class LitterController extends Controller
     {
         //
     }
-}
+} // end

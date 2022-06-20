@@ -9,6 +9,8 @@ class Litter extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function mom()
     {
         return $this->hasMany(Cat::class, 'id', 'mom_id');

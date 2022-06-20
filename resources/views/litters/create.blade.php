@@ -7,11 +7,11 @@
 @section('content')
     <h1 class="text-white text-3xl font-bold">Add Litter</h1>
 
-    <form action="/litter" method="POST" class="py-8" enctype="multipart/form-data">
+    {{-- <form action="/litter" method="POST" class="py-8" enctype="multipart/form-data">
         @csrf
         <input type="text" id="datepicker" name="birthday">
         <button type="submit" class="bg-gold text-white px-3 py-2">Submit</button>
-    </form>
+    </form> --}}
 
     @include('_inc.forms.add-litter')
 @endsection

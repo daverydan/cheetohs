@@ -17,18 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/kittens', function () {
-//     return view('page-kittens');
-// });
 Route::get('kittens', [\App\Http\Controllers\LitterController::class, 'index']);
-
 Route::get('/queens ', [\App\Http\Controllers\CatController::class, 'index']);
 Route::get('/kings ', [\App\Http\Controllers\CatController::class, 'index']);
-
-// Route::post('contact', function () {
-//     dd(request()->all());
-// return view('welcome');
-// });
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {
