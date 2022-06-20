@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LitterRequest;
 use App\Models\Cat;
+use App\Models\Image;
 use App\Models\Litter;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+
+// use Illuminate\Support\Str;
 
 class LitterController extends Controller
 {
@@ -46,7 +49,7 @@ class LitterController extends Controller
         $dad = Cat::where('id', $request->dad_id)->first()->name;
         $birthday = Carbon::create($request->birthday);
 
-        Litter::create([
+        $litter = Litter::create([
             'user_id' => auth()->id(),
             'mom_id' => $request->mom_id,
             'dad_id' => $request->dad_id,
@@ -54,12 +57,14 @@ class LitterController extends Controller
             'birthday' => $birthday,
         ]);
 
-        return redirect()->back();
-        // dd($request->pics);
-
-        foreach ($request->file('pics') as $pic) {
-            dd($pic);
+        if ($request->hasFile('pics')) {
+            $path = '/litters/' . $litter->id;
+            foreach ($request->file('pics') as $pic) {
+                Image::saveImage($pic, $path, $litter->id, 'App\Models\Litter');
+            }
         }
+
+        return redirect()->back();
     }
 
     /**

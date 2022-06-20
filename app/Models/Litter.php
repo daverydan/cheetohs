@@ -20,4 +20,9 @@ class Litter extends Model
     {
         return $this->hasMany(Cat::class, 'id', 'dad_id');
     }
+
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
 }
