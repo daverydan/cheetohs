@@ -3,8 +3,7 @@
     'litter' => [],
 ])
 
-<div
-    class="x-parents px-4 sm:px-8 bg-white py-8 rounded-lg hover:shadow-lg mb-12 relative transition duration-200 ease-in-out">
+<div class="x-parents">
     <span class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 top-14 text-gold text-opacity-40 text-9xl"
         style="">+</span>
     @if ($loop->odd)
@@ -73,13 +72,4 @@
             </h3>
         </a>
     </div> --}}
-    <p class="text-center text-2xl mt-3 mb-2">
-        {{ \Carbon\Carbon::parse($litter->birthday)->format('n / j / y') }}
-    </p>
-    <div class="text-center mt-3">
-        <button type="button"
-            class="bg-gold text-white text-xl px-5 py-2 font-bold hover:bg-opacity-80 transition duration-200 ease-in-out">
-            View Kittens
-        </button>
-    </div>
 </div>

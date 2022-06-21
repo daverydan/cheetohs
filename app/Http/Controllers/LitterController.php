@@ -67,6 +67,12 @@ class LitterController extends Controller
         return redirect()->back();
     }
 
+    public function litterPics($id)
+    {
+        $pics = Image::where('imageable_id', $id)->where('imageable_type', 'App\Models\Litter')->get();
+        return response()->json(compact('pics'));
+    }
+
     /**
      * Display the specified resource.
      *

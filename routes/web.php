@@ -17,7 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('kittens', [\App\Http\Controllers\LitterController::class, 'index']);
+Route::get('/litter-pics/{id}', [\App\Http\Controllers\LitterController::class, 'litterPics']);
+Route::delete('/image/{image}', [\App\Http\Controllers\ImageController::class, 'destroy']);
+
+Route::get('/kittens', [\App\Http\Controllers\LitterController::class, 'index']);
 Route::get('/queens ', [\App\Http\Controllers\CatController::class, 'index']);
 Route::get('/kings ', [\App\Http\Controllers\CatController::class, 'index']);
 

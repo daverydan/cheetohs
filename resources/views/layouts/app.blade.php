@@ -36,7 +36,6 @@
             font-weight: normal;
             font-style: normal;
         }
-
     </style>
 
     <!-- Custom Page Styles -->
@@ -49,7 +48,7 @@
         <x-nav.menu />
 
         <!-- Page Content -->
-        <main class="main">
+        <main class="main" id="app">
             {{-- {{ $slot }} --}}
             @yield('content')
         </main>
