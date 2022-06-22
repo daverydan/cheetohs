@@ -11,7 +11,7 @@
             <div class="sm:w-1/2">
                 <a href="/queens#{{ $litter->mom[0]->name }}" class="flex flex-col items-center group">
                     <img class="inline-block h-28 w-28 border-8 border-red-200 rounded-full object-cover group-hover:scale-110 transition duration-200 ease-in-out"
-                        src="{{ asset($litter->mom[0]->avatar) }}" alt="{{ $litter->mom[0]->name }}">
+                        src="{{ asset('/storage/' . $litter->mom[0]->avatar) }}" alt="{{ $litter->mom[0]->name }}">
                     <h3 class="title text-center pt-3 group-hover:text-gold transition duration-200 ease-in-out"
                         style="font-size: 4rem; line-height: 74px">
                         {{ $litter->mom[0]->name }}
@@ -21,7 +21,7 @@
             <div class="sm:w-1/2">
                 <a href="/kings#{{ $litter->dad[0]->name }}" class="flex flex-col items-center group">
                     <img class="inline-block h-28 w-28 border-8 border-blue-200 rounded-full object-cover group-hover:scale-110 transition duration-200 ease-in-out"
-                        src="{{ asset($litter->dad[0]->avatar) }}" alt="{{ $litter->dad[0]->name }}">
+                        src="{{ asset('/storage/' . $litter->dad[0]->avatar) }}" alt="{{ $litter->dad[0]->name }}">
                     <h3 class="title text-center pt-3 group-hover:text-gold transition duration-200 ease-in-out"
                         style="font-size: 4rem; line-height: 74px">
                         {{ $litter->dad[0]->name }}
