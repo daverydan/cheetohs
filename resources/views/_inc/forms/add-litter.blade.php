@@ -63,10 +63,6 @@
         <div class="md:flex">
             <label for="submit-button" class="w-32 opacity-0 hidden md:block">Description</label>
             <div class="flex max-w-lg w-full">
-                <button type="button" @click="addCat = false"
-                    class="max-w-lg inline-block text-red-600 bg-transparent border border-red-600 font-bold mt-6 px-6 py-2 hover:bg-red-600 hover:text-white trasnsition duration-200 ease-in-out w-full mr-5">
-                    Cancel
-                </button>
                 <button type="submit"
                     class="max-w-lg inline-block text-white bg-gold border border-gold font-bold mt-6 px-6 py-2 hover:bg-opacity-80 hover:border-gold trasnsition duration-200 ease-in-out w-full">
                     Add Litter

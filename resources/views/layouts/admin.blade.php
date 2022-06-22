@@ -36,7 +36,6 @@
             font-weight: normal;
             font-style: normal;
         }
-
     </style>
 
     <!-- Custom Page Styles -->
@@ -67,9 +66,9 @@
                     class="text-white px-3 py-2 border rounded block my-3 hover:text-black hover:bg-white transition duration-200 ease-in-out">
                     Kings
                 </a>
-                <a href="/litters"
+                <a href="/kittens"
                     class="text-white px-3 py-2 border rounded block my-2 hover:text-black hover:bg-white transition duration-200 ease-in-out">
-                    Litters
+                    Kittens
                 </a>
 
                 <p class="text-white mt-5 mb-2">Actions</p>
@@ -93,7 +92,7 @@
                     <form action="/logout" method="POST" class="mr-2">
                         @csrf
                         <button type="submit"
-                            class="border border-red-600 text-red-600 hover:text-white px-2 py-1 hover:bg-red-600 flex justify-center items-center rounded transition duration-200 ease-in-out ml-2">
+                            class="border bg-red-600 border-red-600 text-white hover:text-red-600 px-2 pt-1 pb-2 hover:bg-transparent flex justify-center items-center rounded transition duration-200 ease-in-out ml-2">
                             Logout
                         </button>
                     </form>

@@ -8,6 +8,7 @@ use App\Models\Image;
 use App\Models\Litter;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 // use Illuminate\Support\Str;
 
@@ -67,7 +68,7 @@ class LitterController extends Controller
         return redirect()->back();
     }
 
-    public function litterPics($id)
+    public function getLitterPics($id)
     {
         $pics = Image::where('imageable_id', $id)->where('imageable_type', 'App\Models\Litter')->get();
         return response()->json(compact('pics'));
@@ -92,7 +93,7 @@ class LitterController extends Controller
      */
     public function edit(Litter $litter)
     {
-        //
+        return view('litters.edit', compact('litter'));
     }
 
     /**
@@ -104,7 +105,13 @@ class LitterController extends Controller
      */
     public function update(Request $request, Litter $litter)
     {
-        //
+        if ($request->hasFile('pics')) {
+            $path = '/litters/' . $litter->id;
+            foreach ($request->file('pics') as $pic) {
+                Image::saveImage($pic, $path, $litter->id, 'App\Models\Litter');
+            }
+        }
+        return redirect()->back();
     }
 
     /**
@@ -115,6 +122,13 @@ class LitterController extends Controller
      */
     public function destroy(Litter $litter)
     {
-        //
+        if ($litter->images) {
+            foreach ($litter->images as $image) {
+                $image->delete();
+            }
+            Storage::deleteDirectory('/litters/' . $litter->id);
+        }
+        $litter->delete();
+        return redirect()->back();
     }
 } // end

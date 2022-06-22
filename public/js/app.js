@@ -4790,6 +4790,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["id", "loggedin"],
   data: function data() {
@@ -4811,9 +4820,22 @@ __webpack_require__.r(__webpack_exports__);
           _this.loading = false;
           _this.pics = data.pics;
         })["catch"](function (e) {
+          alert("An error occurred");
           console.log(e);
         });
       }
+    },
+    deletePic: function deletePic(picId) {
+      var _this2 = this;
+
+      axios["delete"]("/image/".concat(picId)).then(function () {
+        _this2.pics.splice(_this2.pics.findIndex(function (i) {
+          return i.id === picId;
+        }), 1);
+      })["catch"](function (e) {
+        alert("An error occurred");
+        console.log(e);
+      });
     }
   }
 });
@@ -22404,7 +22426,7 @@ var render = function () {
           "div",
           {
             staticClass:
-              "mt-3 flex flex-wrap flex-col sm:flex-row rounded-md p-2",
+              "mt-3 flex flex-wrap flex-col sm:flex-row justify-center rounded-md p-2",
             staticStyle: { background: "rgba(149, 108, 52, 0.2)" },
             attrs: { id: "kitten-pics-" + _vm.id },
           },
@@ -22414,7 +22436,7 @@ var render = function () {
               {
                 key: pic.id,
                 staticClass:
-                  "w-full sm:w-1/2 md:w-1/4 overflow-hidden aspect-w-1 aspect-h-1 p-2 relative",
+                  "w-full sm:w-1/2 md:w-1/4 overflow-hidden p-2 relative",
                 attrs: { id: "pic-" + pic.id },
               },
               [
@@ -22425,6 +22447,29 @@ var render = function () {
                     src: "/litters/" + pic.imageable_id + "/" + pic.image,
                   },
                 }),
+                _vm._v(" "),
+                _vm.loggedin
+                  ? _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-red-600 hover:bg-red-700 z-50 text-white absolute w-8 h-8 rounded-full flex justify-center items-center",
+                        staticStyle: {
+                          border: "3px solid #eae1d6",
+                          right: "-2px",
+                          top: "-2px",
+                        },
+                        attrs: { href: "#" },
+                        on: {
+                          click: function ($event) {
+                            $event.preventDefault()
+                            return _vm.deletePic(pic.id)
+                          },
+                        },
+                      },
+                      [_c("i", { staticClass: "fa fa-times" })]
+                    )
+                  : _vm._e(),
               ]
             )
           }),
