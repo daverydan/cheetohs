@@ -24,7 +24,7 @@
                 class="w-full sm:w-1/2 md:w-1/4 overflow-hidden p-2 relative"
             >
                 <img
-                    :src="`/litters/${pic.imageable_id}/${pic.image}`"
+                    :src="`/storage/litters/${pic.imageable_id}/${pic.image}`"
                     class="w-full h-full object-center object-cover group-hover:opacity-75 rounded-md"
                 />
                 <a

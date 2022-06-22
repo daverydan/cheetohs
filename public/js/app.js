@@ -22444,7 +22444,8 @@ var render = function () {
                   staticClass:
                     "w-full h-full object-center object-cover group-hover:opacity-75 rounded-md",
                   attrs: {
-                    src: "/litters/" + pic.imageable_id + "/" + pic.image,
+                    src:
+                      "/storage/litters/" + pic.imageable_id + "/" + pic.image,
                   },
                 }),
                 _vm._v(" "),
