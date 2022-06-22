@@ -25,8 +25,8 @@
                 @if ($loop->odd)
                     <div class="flex flex-col md:flex-row my-16">
                         <div class="w-full md:w-1/2 z-10" style="padding-left: 20px">
-                            <img class="border-8 border-white shadow-gold w-full" src="{{ asset($cat->pic) }}" alt=""
-                                style="margin-top: 20px; margin-right: 20px">
+                            <img class="border-8 border-white shadow-gold w-full" src="{{ asset('/storage/' . $cat->pic) }}"
+                                alt="" style="margin-top: 20px; margin-right: 20px">
                         </div>
                         <div class="bg-white md:w-1/2 ml-5 md:ml-0 p-8 md:mt-5 relative">
                             @auth
