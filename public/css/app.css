@@ -1361,10 +1361,6 @@ select {
 .bg-transparent {
 	background-color: transparent;
 }
-.bg-gray-800 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
-}
 .bg-indigo-50 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(238, 242, 255, var(--tw-bg-opacity));
@@ -1501,8 +1497,8 @@ select {
 .pb-28 {
 	padding-bottom: 7rem;
 }
-.pt-6 {
-	padding-top: 1.5rem;
+.pt-20 {
+	padding-top: 5rem;
 }
 .pt-1 {
 	padding-top: 0.25rem;
@@ -1533,9 +1529,6 @@ select {
 }
 .pr-4 {
 	padding-right: 1rem;
-}
-.pt-20 {
-	padding-top: 5rem;
 }
 .pb-3 {
 	padding-bottom: 0.75rem;
@@ -1762,6 +1755,10 @@ select {
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(209, 213, 219, var(--tw-ring-opacity));
 }
+.ring-gold {
+	--tw-ring-opacity: 1;
+	--tw-ring-color: rgba(149, 108, 52, var(--tw-ring-opacity));
+}
 .ring-black {
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
@@ -1872,10 +1869,6 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
-.hover\:bg-gray-700:hover {
-	--tw-bg-opacity: 1;
-	background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
-}
 .hover\:bg-blue-600:hover {
 	--tw-bg-opacity: 1;
 	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
@@ -1959,10 +1952,6 @@ select {
 	--tw-border-opacity: 1;
 	border-color: rgba(165, 180, 252, var(--tw-border-opacity));
 }
-.focus\:border-gray-900:focus {
-	--tw-border-opacity: 1;
-	border-color: rgba(17, 24, 39, var(--tw-border-opacity));
-}
 .focus\:border-gold:focus {
 	--tw-border-opacity: 1;
 	border-color: rgba(149, 108, 52, var(--tw-border-opacity));
@@ -2040,9 +2029,9 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
-.active\:bg-gray-900:active {
+.active\:bg-gold:active {
 	--tw-bg-opacity: 1;
-	background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+	background-color: rgba(149, 108, 52, var(--tw-bg-opacity));
 }
 .active\:text-gray-700:active {
 	--tw-text-opacity: 1;
@@ -2142,10 +2131,6 @@ select {
 		justify-content: flex-start;
 	}
 
-	.sm\:justify-center {
-		justify-content: center;
-	}
-
 	.sm\:justify-between {
 		justify-content: space-between;
 	}
@@ -2156,10 +2141,6 @@ select {
 
 	.sm\:overflow-hidden {
 		overflow: hidden;
-	}
-
-	.sm\:rounded-lg {
-		border-radius: 0.5rem;
 	}
 
 	.sm\:p-6 {

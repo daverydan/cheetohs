@@ -14,7 +14,7 @@
                 <div class="text-white lg:w-auto mx-auto text-center z-50 px-10 pt-16 sm:h-full md:py-24 lg:py-44 xl:py-56">
                     <h3 class="text-4xl font-bold mb-5 leading-snug">
                         Cheetoh Cat Founder
-                        <span class="block text-sm">Carol Drymons</span>
+                        <span class="block text-sm">Carol Drymon</span>
                     </h3>
                     <p>
                         The Cheetoh is the newest hybrid cross, utilizing the best of both the Bengal and the Ocicat

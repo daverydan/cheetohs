@@ -1,5 +1,33 @@
 @extends('layouts.app', ['title' => ucfirst($type . 's')])
 
+@section('styles')
+    <style>
+        .box-shadow-left-gold {
+            box-shadow: -20px -20px 0px 0px #956C34
+        }
+
+        .box-shadow-left-blue {
+            box-shadow: -20px -20px 0px 0px #BFDBFE
+        }
+
+        .box-shadow-left-pink {
+            box-shadow: -20px -20px 0px 0px #FECACA
+        }
+
+        .box-shadow-right-gold {
+            box-shadow: 20px -20px 0px 0px #956C34;
+        }
+
+        .box-shadow-right-blue {
+            box-shadow: 20px -20px 0px 0px #BFDBFE;
+        }
+
+        .box-shadow-right-pink {
+            box-shadow: 20px -20px 0px 0px #FECACA;
+        }
+    </style>
+@endsection
+
 @section('content')
     <div class="block w-[100%] h-[390px] relative"
         style="background: url({{ asset('img/page-' . $type . 's/' . $type . '-hero.png') }}) no-repeat center / cover">
@@ -25,8 +53,10 @@
                 @if ($loop->odd)
                     <div class="flex flex-col md:flex-row my-16">
                         <div class="w-full md:w-1/2 z-10" style="padding-left: 20px">
-                            <img class="border-8 border-white shadow-gold w-full" src="{{ asset('/storage/' . $cat->pic) }}"
-                                alt="" style="margin-top: 20px; margin-right: 20px">
+                            {{-- shadow-gold --}}
+                            <img class="border-8 border-white w-full {{ $cat->type === 'queen' ? 'box-shadow-left-pink' : 'box-shadow-left-blue' }}"
+                                src="{{ asset('/storage/' . $cat->pic) }}" alt=""
+                                style="margin-top: 20px; margin-right: 20px">
                         </div>
                         <div class="bg-white md:w-1/2 ml-5 md:ml-0 p-8 md:mt-5 relative">
                             @auth
@@ -122,8 +152,10 @@
                                 style="bottom: 10px; transform: rotate(15deg); right: 100px"></i>
                         </div>
                         <div class="w-full md:w-1/2 z-10" style="padding-right: 20px">
-                            <img class="border-8 border-white w-full mt-5 mr-5" src="{{ asset($cat->pic) }}" alt=""
-                                style="box-shadow: 20px -20px 0px 0px #956C34">
+                            <img class="border-8 border-white w-full mt-5 mr-5 {{ $cat->type == 'queen' ? 'box-shadow-right-pink' : 'box-shadow-right-blue' }}"
+                                src="{{ asset($cat->pic) }}" alt="">
+                            {{-- style="box-shadow: 20px -20px 0px 0px #956C34" --}}
+                            {{-- BFDBFE --}}
                         </div>
                     </div>
                 @endif
