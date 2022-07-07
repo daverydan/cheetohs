@@ -153,7 +153,7 @@
                         </div>
                         <div class="w-full md:w-1/2 z-10" style="padding-right: 20px">
                             <img class="border-8 border-white w-full mt-5 mr-5 {{ $cat->type == 'queen' ? 'box-shadow-right-pink' : 'box-shadow-right-blue' }}"
-                                src="{{ asset($cat->pic) }}" alt="">
+                                src="{{ asset('/storage/' . $cat->pic) }}" alt="">
                             {{-- style="box-shadow: 20px -20px 0px 0px #956C34" --}}
                             {{-- BFDBFE --}}
                         </div>
