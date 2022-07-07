@@ -17,7 +17,7 @@ class CatController extends Controller
     public function index()
     {
         $type = Cat::getCatType();
-        $cats = Cat::where('type', $type)->latest()->get();
+        $cats = Cat::where('type', $type)->get();
         return view('page-cats', compact('type', 'cats'));
     }
 

@@ -21,7 +21,7 @@ class LitterController extends Controller
      */
     public function index()
     {
-        $litters = Litter::with(['mom', 'dad'])->latest()->get();
+        $litters = Litter::with(['mom', 'dad'])->get();
         // dd($litters);
         return view('page-kittens', compact('litters'));
     }
