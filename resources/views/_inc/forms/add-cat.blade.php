@@ -83,6 +83,8 @@
                     <option value="F2">F2</option>
                     <option value="F3">F3</option>
                     <option value="F4">F4</option>
+                    <option value="Bengal">Bengal</option>
+                    <option value="Savannah">Savannah</option>
                 </select>
             </div>
             @error('generation')

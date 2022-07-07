@@ -88,6 +88,8 @@
                     <option value="F2" @if ($cat->generation == 'F2') selected @endif>F2</option>
                     <option value="F3" @if ($cat->generation == 'F3') selected @endif>F3</option>
                     <option value="F4" @if ($cat->generation == 'F4') selected @endif>F4</option>
+                    <option value="Bengal" @if ($cat->generation == 'Bengal') selected @endif>Bengal</option>
+                    <option value="Savannah" @if ($cat->generation == 'Savannah') selected @endif>Savannah</option>
                 </select>
             </div>
             @error('generation')
